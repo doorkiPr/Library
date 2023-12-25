@@ -1,6 +1,6 @@
 const libraryDiv = document.querySelector('.library');
 const addbtn = document.querySelector('.addBook');
-
+const dialog = document.querySelector('dialog')
 function Book(title,author,pages,read) {
     this.title = title;
     this.author = author;
@@ -16,6 +16,10 @@ const myLibrary = [mockBookOne,mockBookTwo,mockBookthree];
 function addBooktoLibrary(book) {
     myLibrary.push(book);
 }
+
+addbtn.addEventListener("click",()=>{
+    dialog.showModal()
+})
 
 function displayBook(book) {
     const card =  document.createElement("div");
