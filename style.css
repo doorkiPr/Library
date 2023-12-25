@@ -11,5 +11,20 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
+}
+.footer{
+    height: 5vh;
+}
+.library{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+.card{
+    padding: 15px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1.5rem;
     align-items: center;
 }
