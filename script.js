@@ -25,7 +25,7 @@ addbtn.addEventListener("click",()=>{
 submit.addEventListener("click",()=>{
     const title = document.querySelector("#title");
     const author = document.querySelector("#author");
-    const pages = document.querySelector("#authors");
+    const pages = document.querySelector("#pages");
     const read = document.querySelector("#read");
 })
 function displayBook(book) {
