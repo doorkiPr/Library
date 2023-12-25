@@ -1,8 +1,7 @@
 const libraryDiv = document.querySelector('.library');
 const addbtn = document.querySelector('.addBook');
 const dialog = document.querySelector('dialog');
-const submit = document.querySelector('#submit');
-
+const myform = document.querySelector('form');
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -79,7 +78,7 @@ addbtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
-submit.addEventListener("click", () => {
+form.addEventListener("submit", () => {
     const title = document.querySelector("#title");
     const author = document.querySelector("#author");
     const pages = document.querySelector("#pages");
