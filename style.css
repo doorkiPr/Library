@@ -33,6 +33,7 @@ button{
     font-size: 3rem;
     text-align: center;
     background-color: var(--white);
+    font-weight: 700;
 }
 .content{
     height: 80vh;
