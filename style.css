@@ -9,6 +9,16 @@
     --spacing-button: 15px;
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+button, ipnut{
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
 .body{
     display: flex;
     flex-direction: column;
@@ -35,10 +45,23 @@
     padding: var(--spacing-button);
     height: 300px;
     box-shadow: var(--shadow);
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
     align-items: center;
+    justify-content: space-around;
+}
+.deleteBtn, .readBtn{
+    padding: var(--spacing-button);
+    font-size: 1.8rem;
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+.deleteBtn:hover, .readBtn:hover{
+    filter: brightness(90%);
+}
+.deleteBtn{
+    background-color: var(--light-red);
 }
