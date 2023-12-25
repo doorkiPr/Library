@@ -37,4 +37,5 @@ function displayBook(book) {
     card.appendChild(pages);
     card.appendChild(read);
     card.appendChild(deleteBook);  
+    libraryDiv.appendChild(card);
 }
