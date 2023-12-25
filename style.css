@@ -32,6 +32,7 @@ button, ipnut{
     height: 80vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--grey);
 }
 .footer{
     height: 5vh;
@@ -42,6 +43,7 @@ button, ipnut{
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
 }
 .card{
+    background-color: var(--white);
     padding: var(--spacing-button);
     height: 300px;
     box-shadow: var(--shadow);
