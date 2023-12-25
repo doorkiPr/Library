@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" async></script>
+    <link rel="shortcut icon" href="media/library.jpg"/>
+
     <title>Library</title>
 </head>
 
@@ -21,7 +23,7 @@
                     <label for="author">Author:</label>
                     <input type="text" id="author" name="author" required>
                     <label for="pages">Pages:</label>
-                    <input type="number" id="pages" name="pages" required>
+                    <input type="number" id="pages" name="pages" min="0" required>
                     <div class="checkboxWrapper">
                         <label for="read">Have you read it ?</label>
                         <input type="checkbox" name="read" id="read" value="read">
