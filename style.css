@@ -28,14 +28,17 @@
 }
 .library{
     display: grid;
+    gap: var(--spacing-button);
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
 }
 .card{
-    padding: 15px;
+    padding: var(--spacing-button);
     height: 300px;
+    box-shadow: var(--shadow);
+    font-size: 2rem;
+    border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 1.5rem;
     align-items: center;
 }
