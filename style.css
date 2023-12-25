@@ -1,0 +1,9 @@
+.body{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 15vh;
+    font-size: 3rem;
+    text-align: center;
+}
