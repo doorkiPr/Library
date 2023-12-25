@@ -28,6 +28,9 @@ submit.addEventListener("click",()=>{
     const pages = document.querySelector("#pages");
     const read = document.querySelector("#read");
     const myBook = new Book(title.value,author.value,+pages.value,read.checked);
+    while (libraryDiv.firstChild) {
+        libraryDiv.removeChild(libraryDiv.firstChild);
+      }
     addBooktoLibrary(myBook);
     myLibrary.forEach(book => displayBook(book));
 })
