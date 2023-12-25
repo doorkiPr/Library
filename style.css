@@ -22,7 +22,10 @@ button, ipnut{
     cursor: pointer;
     outline: none;
 }
-
+button{
+    border-radius: var(--border-radius);
+    padding: var(--spacing-button);
+}
 .body{
     display: flex;
     flex-direction: column;
@@ -38,9 +41,23 @@ button, ipnut{
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
+    gap: var(--spacing-button);
 }
 .footer{
     height: 5vh;
+}
+.buttonWrapper{
+    align-self: center;
+    height: 100px;
+    padding: var(--spacing-button);
+}
+.addBook{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: var(--spacing-button);
+}
+.addBook:hover{
+    filter: brightness(90%);
 }
 .library{
     display: grid;
@@ -61,10 +78,8 @@ button, ipnut{
     justify-content: space-around;
 }
 .deleteBtn, .readBtn{
-    padding: var(--spacing-button);
     font-size: 1.8rem;
     width: 80%;
-    border-radius: var(--border-radius);
 }
 .deleteBtn:hover, .readBtn:hover{
     filter: brightness(90%);
