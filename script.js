@@ -58,7 +58,6 @@ function displayBook(book) {
         removeBook(book.title, myLibrary, libraryDiv);
     });
     read.addEventListener("click", () => {
-        read.classList.toggle("greenBtn") ;
         book.read? book.read = false : book.read = true;
         while (libraryDiv.firstChild) {
             libraryDiv.removeChild(libraryDiv.firstChild);
