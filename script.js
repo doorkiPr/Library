@@ -10,7 +10,7 @@ function Book(title,author,pages,read) {
 }
 
 function addBooktoLibrary(book) {
-    myLibrary.puh(book);
+    myLibrary.push(book);
 }
 
 function displayBook(book) {
