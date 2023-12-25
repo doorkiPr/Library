@@ -3,42 +3,27 @@ const addbtn = document.querySelector('.addBook');
 const dialog = document.querySelector('dialog');
 const submit = document.querySelector('#submit');
 
-function Book(title,author,pages,read) {
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
 }
-const mockBookOne = new Book("MY title","Some author",45,false);
-const mockBookTwo = new Book("MY title","Some author",45,false);
-const mockBookthree = new Book("MY dd","Some author",45,false);
-const myLibrary = [mockBookOne,mockBookTwo,mockBookthree];
-
-function displayLibrary(books){
-    books.forEach(book => displayBook(book));
-}
+const mockBookOne = new Book("MY title", "Some author", 45, false);
+const mockBookTwo = new Book("MY title", "Some author", 45, false);
+const mockBookthree = new Book("MY dd", "Some author", 45, false);
+const myLibrary = [mockBookOne, mockBookTwo, mockBookthree];
 
 function addBooktoLibrary(book) {
     myLibrary.push(book);
-}
+};
 
-addbtn.addEventListener("click",()=>{
-    dialog.showModal();
-})
-submit.addEventListener("click",()=>{
-    const title = document.querySelector("#title");
-    const author = document.querySelector("#author");
-    const pages = document.querySelector("#pages");
-    const read = document.querySelector("#read");
-    const myBook = new Book(title.value,author.value,+pages.value,read.checked);
-    while (libraryDiv.firstChild) {
-        libraryDiv.removeChild(libraryDiv.firstChild);
-      }
-    addBooktoLibrary(myBook);
-    displayLibrary(myLibrary);
-})
+function displayLibrary(books) {
+    books.forEach(book => displayBook(book));
+};
+
 function displayBook(book) {
-    const card =  document.createElement("div");
+    const card = document.createElement("div");
     card.classList.toggle("card");
     const title = document.createElement("div");
     card.classList.toggle("cardText");
@@ -52,30 +37,47 @@ function displayBook(book) {
     deleteBook.classList.toggle("deleteBtn");
 
     read.textContent = book.read ? "Already read" : "Not read yet";
-    deleteBook.textContent = "delete"  
+    deleteBook.textContent = "delete"
     title.textContent = book.title;
     author.textContent = book.author;
     pages.textContent = book.pages + " pages.";
-  
+
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(pages);
     card.appendChild(read);
-    card.appendChild(deleteBook);  
+    card.appendChild(deleteBook);
     libraryDiv.appendChild(card);
-    deleteBook.addEventListener("click",()=>{
-        removeBook(book.title,myLibrary,libraryDiv);
+    deleteBook.addEventListener("click", () => {
+        removeBook(book.title, myLibrary, libraryDiv);
     });
-}
+};
 
-function removeBook(title,array,library){
-    array.forEach( (book,i) =>{
-        if(book.title === title){
-            array.splice(array.indexOf(book),1)
+function removeBook(title, array, library) {
+    array.forEach((book, i) => {
+        if (book.title === title) {
+            array.splice(array.indexOf(book), 1)
         }
     })
     while (library.firstChild) {
         library.removeChild(library.firstChild);
-      }
-      array.forEach(book => displayBook(book));
-}
+    }
+    array.forEach(book => displayBook(book));
+};
+
+addbtn.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+submit.addEventListener("click", () => {
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#pages");
+    const read = document.querySelector("#read");
+    const myBook = new Book(title.value, author.value, +pages.value, read.checked);
+    while (libraryDiv.firstChild) {
+        libraryDiv.removeChild(libraryDiv.firstChild);
+    }
+    addBooktoLibrary(myBook);
+    displayLibrary(myLibrary);
+});
