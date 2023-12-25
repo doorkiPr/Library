@@ -14,6 +14,9 @@ const mockBookTwo = new Book("MY title","Some author",45,false);
 const mockBookthree = new Book("MY dd","Some author",45,false);
 const myLibrary = [mockBookOne,mockBookTwo,mockBookthree];
 
+function displayLibrary(books){
+    books.forEach(book => displayBook(book));
+}
 
 function addBooktoLibrary(book) {
     myLibrary.push(book);
@@ -32,7 +35,7 @@ submit.addEventListener("click",()=>{
         libraryDiv.removeChild(libraryDiv.firstChild);
       }
     addBooktoLibrary(myBook);
-    myLibrary.forEach(book => displayBook(book));
+    displayLibrary(myLibrary);
 })
 function displayBook(book) {
     const card =  document.createElement("div");
