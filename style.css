@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 :root{
     --white: #fffbfb;
     --grey: #f0eef1;
@@ -27,6 +31,7 @@ button, ipnut{
     height: 15vh;
     font-size: 3rem;
     text-align: center;
+    background-color: var(--white);
 }
 .content{
     height: 80vh;
