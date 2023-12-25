@@ -36,7 +36,7 @@ function displayBook(book) {
     const deleteBook = document.createElement("button");
     deleteBook.classList.toggle("deleteBtn");
 
-    if(book.read){
+    if (book.read) {
         read.classList.toggle("greenBtn");
         read.textContent = "Already read";
     }
@@ -58,7 +58,7 @@ function displayBook(book) {
         removeBook(book.title, myLibrary, libraryDiv);
     });
     read.addEventListener("click", () => {
-        book.read? book.read = false : book.read = true;
+        book.read ? book.read = false : book.read = true;
         while (libraryDiv.firstChild) {
             libraryDiv.removeChild(libraryDiv.firstChild);
         };
