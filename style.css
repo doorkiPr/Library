@@ -36,8 +36,8 @@ button{
     font-weight: 700;
 }
 .content{
-    height: 80vh;
     display: flex;
+    min-height: 80vh;
     flex-direction: column;
     background-color: var(--grey);
     gap: var(--spacing-button);
