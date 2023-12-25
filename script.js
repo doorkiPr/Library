@@ -15,17 +15,11 @@ const myLibrary = [mockBookOne,mockBookTwo,mockBookthree];
 
 
 function addBooktoLibrary(book) {
-    const title = document.querySelector("#title");
-    const author = document.querySelector("#author");
-    const pages = document.querySelector("#authors");
-    const read = document.querySelector("#read");
-    
     myLibrary.push(book);
 }
 
 addbtn.addEventListener("click",()=>{
     dialog.showModal();
-
 })
 
 function displayBook(book) {
