@@ -119,5 +119,5 @@ label{
     font-weight: 800;
 }
 .greenBtn{
-    color: var(--light-green);
+   background-color: var(--light-green);
 }
