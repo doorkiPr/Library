@@ -9,7 +9,7 @@
     --spacing-button: 15px;
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-button, ipnut{
+button, input{
     border: none;
     color: inherit;
     font-family: inherit;
@@ -82,4 +82,36 @@ button{
 }
 .deleteBtn{
     background-color: var(--light-red);
+}
+.dialog{
+    border: none !important;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 1.6rem;
+    padding-bottom: 0;
+    width: 350px;
+    height: 350px;
+    background-color: var(--white);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    font-size: 1.5rem;
+}
+
+input{
+    height: 15%;
+    font-size: 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--grey);
+}
+input:focus{
+    border: none;
+}
+#read{
+    height: fit-content;
+}
+label{
+    font-weight: 800;
 }
