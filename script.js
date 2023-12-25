@@ -23,7 +23,10 @@ addbtn.addEventListener("click",()=>{
     dialog.showModal();
 })
 submit.addEventListener("click",()=>{
-
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    const pages = document.querySelector("#authors");
+    const read = document.querySelector("#read");
 })
 function displayBook(book) {
     const card =  document.createElement("div");
