@@ -9,10 +9,7 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
 }
-const mockBookOne = new Book("MY title", "Some author", 45, false);
-const mockBookTwo = new Book("MY title", "Some author", 45, false);
-const mockBookthree = new Book("MY dd", "Some author", 45, false);
-const myLibrary = [mockBookOne, mockBookTwo, mockBookthree];
+const myLibrary = [];
 
 function addBooktoLibrary(book) {
     myLibrary.push(book);
