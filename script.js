@@ -27,6 +27,8 @@ submit.addEventListener("click",()=>{
     const author = document.querySelector("#author");
     const pages = document.querySelector("#pages");
     const read = document.querySelector("#read");
+    const myBook = new Book(title.value,author.value,+pages.value,read.value === "read" ? true : false);
+    
 })
 function displayBook(book) {
     const card =  document.createElement("div");
@@ -55,5 +57,4 @@ function displayBook(book) {
     card.appendChild(deleteBook);  
     libraryDiv.appendChild(card);
 }
-
-myLibrary.forEach(book => displayBook(book));
+ myLibrary.forEach(book => displayBook(book));
