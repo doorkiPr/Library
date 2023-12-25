@@ -36,7 +36,13 @@ function displayBook(book) {
     const deleteBook = document.createElement("button");
     deleteBook.classList.toggle("deleteBtn");
 
-    read.textContent = book.read ? "Already read" : "Not read yet";
+    if(book.read){
+        read.classList.toggle("greenBtn");
+        read.textContent = "Already read";
+    }
+    else {
+        read.textContent = "Not read yet";
+    }
     deleteBook.textContent = "delete"
     title.textContent = book.title;
     author.textContent = book.author;
