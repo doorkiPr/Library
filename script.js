@@ -39,3 +39,5 @@ function displayBook(book) {
     card.appendChild(deleteBook);  
     libraryDiv.appendChild(card);
 }
+
+myLibrary.forEach(book => displayBook(book));
