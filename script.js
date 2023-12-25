@@ -28,6 +28,8 @@ submit.addEventListener("click",()=>{
     const pages = document.querySelector("#pages");
     const read = document.querySelector("#read");
     const myBook = new Book(title.value,author.value,+pages.value,read.checked);
+    addBooktoLibrary(myBook);
+    myLibrary.forEach(book => displayBook(book));
 })
 function displayBook(book) {
     const card =  document.createElement("div");
@@ -56,4 +58,3 @@ function displayBook(book) {
     card.appendChild(deleteBook);  
     libraryDiv.appendChild(card);
 }
- myLibrary.forEach(book => displayBook(book));
