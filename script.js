@@ -27,8 +27,7 @@ submit.addEventListener("click",()=>{
     const author = document.querySelector("#author");
     const pages = document.querySelector("#pages");
     const read = document.querySelector("#read");
-    const myBook = new Book(title.value,author.value,+pages.value,read.value === "read" ? true : false);
-    
+    const myBook = new Book(title.value,author.value,+pages.value,read.checked);
 })
 function displayBook(book) {
     const card =  document.createElement("div");
