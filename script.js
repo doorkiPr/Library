@@ -78,7 +78,7 @@ addbtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
-form.addEventListener("submit", () => {
+myform.addEventListener("submit", () => {
     const title = document.querySelector("#title");
     const author = document.querySelector("#author");
     const pages = document.querySelector("#pages");
