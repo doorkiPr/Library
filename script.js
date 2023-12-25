@@ -47,7 +47,7 @@ function displayBook(book) {
     read.classList.toggle("readBtn");
     const deleteBook = document.createElement("button");
     deleteBook.classList.toggle("deleteBtn");
-  
+
     read.textContent = book.read ? "Already read" : "Not read yet";
     deleteBook.textContent = "delete"  
     title.textContent = book.title;
@@ -60,4 +60,19 @@ function displayBook(book) {
     card.appendChild(read);
     card.appendChild(deleteBook);  
     libraryDiv.appendChild(card);
+    deleteBook.addEventListener("click",()=>{
+        removeBook(book.title,myLibrary,libraryDiv);
+    });
+}
+
+function removeBook(title,array,library){
+    array.forEach( (book,i) =>{
+        if(book.title === title){
+            array.splice(array.indexOf(book),1)
+        }
+    })
+    while (library.firstChild) {
+        library.removeChild(library.firstChild);
+      }
+      array.forEach(book => displayBook(book));
 }
