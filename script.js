@@ -1,3 +1,5 @@
+const libraryDiv = Document.querySelector('.library');
+const addbtn = Document.querySelector('.addBook');
 const myLibrary = [];
 
 function Book(title,author,pages,read) {
